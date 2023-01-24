@@ -6,7 +6,7 @@ class Person {
     this.age = age;
   }
 
-  static mostOld() {
+  mostOld() {
     if (P1.age > P2.age && P1.age > P3.age) {
       return P1.name + " è più grande di " + P2.name + " e " + P3.name;
     } else if (P2.age > P1.age && P2.age > P3.age) {
@@ -17,6 +17,6 @@ class Person {
 }
 
 let P1 = new Person("Dusan", "50");
-let P2 = new Person("Angel", "40");
-let P3 = new Person("Paul", "36");
-console.log(Person.mostOld());
+let P2 = new Person("Angel", "60");
+let P3 = new Person("Paul", "96");
+console.log(P1.mostOld());
