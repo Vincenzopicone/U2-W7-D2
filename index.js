@@ -1,71 +1,85 @@
-// ESERCIZIO 2 //
+// ESERCIZIO 2 - work in progress //
 let listaPersone = [
-  (P1 = {
+  (P = {
     name: "Jack",
     surname: "Spa",
     age: 32,
   }),
-  (P2 = {
+  (P = {
     name: "Jhon",
     surname: "Row",
     age: 25,
   }),
-  (P3 = {
+  (P = {
     name: "Michael",
     surname: "Arrow",
     age: 45,
   }),
-  (P4 = {
+  (P = {
     name: "Cristano",
     surname: "Ronaldo",
     age: 39,
   }),
-  (P5 = {
+  (P = {
     name: "Lionel",
     surname: "Messi",
     age: 34,
   }),
-  (P6 = {
+  (P = {
     name: "Maurizio",
     surname: "Costanzo",
     age: 30,
   }),
-  (P7 = {
+  (P = {
     name: "Pep",
     surname: "Rino",
     age: 15,
   }),
-  (P8 = {
+  (P = {
     name: "Manuel",
     surname: "Arco",
     age: 98,
   }),
-  (P9 = {
+  (P = {
     name: "Giuseppe",
     surname: "Eppesuig",
     age: 65,
   }),
-  (P10 = {
+  (P = {
     name: "Nicola",
     surname: "Mandarino",
     age: 45,
   }),
-  (P11 = {
+  (P = {
     name: "Armando",
     surname: "Mando",
     age: 74,
   }),
-  (P12 = {
+  (P = {
     name: "Chiara",
     surname: "Sparrow",
     age: 66,
   }),
-  (P13 = {
+  (P = {
     name: "Maria",
     surname: "Sparrow",
     age: 33,
   }),
 ];
+
+for (i = 0; i < listaPersone.length; i++) {
+  let newElement = document.getElementById("table");
+  let colonnaNome = document.createElement("td");
+  let colonnaCognome = document.createElement("td");
+  let colonnaData = document.createElement("td");
+  colonnaNome.innerHTML = listaPersone[i].name;
+  colonnaCognome.innerHTML = listaPersone[i].surname;
+  colonnaData.innerHTML = listaPersone[i].date;
+  newTr.appendChild(colonnaNome);
+  newTr.appendChild(colonnaCognome);
+  newTr.appendChild(colonnaData);
+  newElement.appendChild(newTr);
+}
 
 const Person = function (nome, cognome, data) {
   this.name = nome;
@@ -80,7 +94,6 @@ function inserisciButton() {
   let newElement = document.getElementById("table");
 
   let newPerson = new Person(nome, cognome, data);
-  listaPersone.push(newPerson);
   let newTr = document.createElement("tr");
   let colonnaNome = document.createElement("td");
   let colonnaCognome = document.createElement("td");
